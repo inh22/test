@@ -7,6 +7,17 @@ def bubble_sort(data_list):
             if data_list[j] > data_list[j+1]:
                 data_list[j], data_list[j+1] = data_list[j+1], data_list[j]
 
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        # key보다 큰 요소는 한 칸씩 뒤로 이동
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
+
 if __name__ == "__main__":
     data_list = []
 
